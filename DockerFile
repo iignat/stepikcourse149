@@ -1,0 +1,11 @@
+RUN apt update
+RUN apt install libevent-dev
+RUN apt install libev-dev
+RUN apt install libuv1-dev
+RUN apt install libboost-all-dev
+
+username=$(docker info | sed '/Username:/!d;s/.* //'); 
+
+
+RUN mkdir /home/box
+RUN chown -R $username:$username /home/box 
