@@ -1,8 +1,9 @@
-RUN apt update
-RUN apt install libevent-dev
-RUN apt install libev-dev
-RUN apt install libuv1-dev
-RUN apt install libboost-all-dev
+RUN apt-get update
+RUN apt-get install build-essential
+RUN apt-get install libevent-dev
+RUN apt-get install libev-dev
+RUN apt-get install libuv1-dev
+RUN apt-get install libboost-all-dev
 
 username=$(docker info | sed '/Username:/!d;s/.* //'); 
 
